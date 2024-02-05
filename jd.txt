@@ -1,0 +1,17 @@
+ASP.Net, C#, JavaScript, VB Script, HTML, CSS and SQL.
+
+Designs, develops, troubleshoots, debugs, and implements software code using the following web development components: Java, JSP and XHTML with heavy reliance on JavaScript code for DHTML interfaces.
+
+Frequent use and application of technical standards, principles, theories, concepts, and techniques. Provides solutions to a variety of technical problems of moderate scope and complexity.
+
+Experience developing web applications using the ASP.NET MVC Framework is desired.
+
+Microsoft Web Developer Backend Development Skills Specifically
+
+Strong C# & SQL Server skills required for backend development required
+
+Experience With API Testing Tools Required
+
+ADO and Agile Experience required
+
+MVC .Net Core and Blazor knowledge would be beneficial
