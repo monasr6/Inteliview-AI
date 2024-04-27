@@ -1,7 +1,7 @@
-
 # A very simple Flask Hello World app for you to get started with...
 from flask import Flask, jsonify, request
 from CVmatch import CVmatching
+import os
 # use args to get the path of the cv and the jd
 
 app = Flask(__name__)
@@ -15,13 +15,14 @@ def cvmatch():
     if authorization_header!= f'Bearer {expected_api_key}':
         return jsonify({'message': 'Unauthorized access. Invalid API key.'}), 401
 
-    request_data = request.json
-    resume_path = request_data.get('resumePath')
-    jd = request_data.get('jd')
+    file = request.files['rawCV']
+    jd = request.form.get('jd')
 
-    import requests
-    response = requests.get(resume_path)
-    pdf_data = response.content
+    filename ='/home/Inteliview/mysite/'+file.filename
+    file.save(filename)
+    print(filename)
+
+    # print("pdf_data ",pdf_data)
 
     # To get the pdf and jd from disk
 
@@ -31,7 +32,8 @@ def cvmatch():
     # with open('/home/Inteliview/mysite/senior.pdf', 'rb') as f:
     #     pdf_data = f.read()
 
-    res = CVmatching(jd,pdf_data)
+    res = CVmatching(jd,filename)
+    os.remove(filename)
     return str(res)
 
 @app.route('/', methods=['GET'])
