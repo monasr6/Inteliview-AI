@@ -1,0 +1,5 @@
+flask
+SpeechRecognition
+google-cloud-language
+sudo apt update
+sudo apt install ffmpeg

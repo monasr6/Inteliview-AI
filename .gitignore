@@ -162,3 +162,5 @@ cython_debug/
 *.model
 *.mp3
 *.mp4
+*.wav
+*.json
